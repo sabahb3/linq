@@ -7,5 +7,9 @@ namespace LINQ_Task
             return numbers.Select(number => number * number).SequenceEqual(squares);
             
         }
+        public static string? GetTheLastWord(IEnumerable<string> words)
+        {
+          return words.Where(word=>word.Contains('e')).OrderBy(word=>word).Select(word=>$"The last word is {word}").LastOrDefault();
+        }
     }
 }
