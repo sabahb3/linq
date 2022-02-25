@@ -1,3 +1,4 @@
+using System.Linq;
 namespace LINQ_Task
 {
     public class LINQ
@@ -11,5 +12,6 @@ namespace LINQ_Task
         {
           return words.Where(word=>word.Contains('e')).OrderBy(word=>word).Select(word=>$"The last word is {word}").LastOrDefault();
         }
+
     }
 }
